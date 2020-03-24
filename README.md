@@ -1,4 +1,4 @@
-# mern-stack-boilerplate
+# mern-tenthouse-rental-application
 
 To use this application, 
 
