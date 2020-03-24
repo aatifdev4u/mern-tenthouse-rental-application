@@ -7,6 +7,13 @@ import LoginPage from "./views/LoginPage/LoginPage.js";
 import RegisterPage from "./views/RegisterPage/RegisterPage.js";
 import NavBar from "./views/Navbar/Navbar.js";
 import Footer from "./views/Footer/Footer"
+import AddProduct from './views/AddProduct/AddProduct';
+import AddCustomer from './views/AddCustomer/AddCustomer';
+import Book from './views/Book/Book';
+import Return from './views/Return/Return';
+import Transaction from './views/Transaction/Transaction'
+import Payment from './views/Payment/Payment'
+import Refunded from './views/Return/Refunded';
 
 function App() {
   return (
@@ -17,6 +24,13 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+          <Route exact path="/addproduct" component={Auth(AddProduct, true)} />
+          <Route exact path="/addcustomer" component={Auth(AddCustomer, true)} />
+          <Route exact path="/book" component={Auth(Book, true)} />
+          <Route exact path="/return" component={Auth(Return, true)} />
+          <Route exact path="/transaction" component={Auth(Transaction, true)} />
+          <Route exact path="/transaction/:transactionId" component={Auth(Payment, true)} />
+          <Route exact path="/transaction/refund/:transactionId" component={Auth(Refunded, true)} />
         </Switch>
       </div>
       <Footer />

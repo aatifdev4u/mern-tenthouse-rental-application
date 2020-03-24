@@ -21,6 +21,9 @@ require('./database');
 
 // connecting to routes
 app.use("/api/users", require('./routes/users'));
+app.use("/api/product", require('./routes/product'));
+app.use("/api/customer", require('./routes/customer'));
+app.use("/api/transaction", require('./routes/transaction'));
 
 
 
